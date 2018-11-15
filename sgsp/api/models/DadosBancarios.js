@@ -13,7 +13,7 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    codigoDadosBanco: { type: 'integer' },
+    codigoDadosBanco: { type: 'number' },
 
     nomeBanco: { type: 'string' },
 

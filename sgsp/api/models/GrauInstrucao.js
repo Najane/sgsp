@@ -13,7 +13,7 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    codigoGrau: { type: 'integer' },
+    codigoGrau: { type: 'number' },
 
     descricaoGrau: { type: 'string' }
 

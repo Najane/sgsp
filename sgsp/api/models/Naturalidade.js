@@ -13,7 +13,7 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    codNatural: { type: 'integer' },
+    codNatural: { type: 'number' },
 
     cidadeNatural: { type: 'string' },
 

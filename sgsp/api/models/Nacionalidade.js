@@ -13,7 +13,7 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    codigoPais: { type: 'integer' },
+    codigoPais: { type: 'number' },
 
     descricaoPais: { type: 'string' }
 

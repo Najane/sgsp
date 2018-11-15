@@ -19,9 +19,9 @@ module.exports = {
 
     nomeCompleto: { type: 'string' },
 
-    dataNascimento: { type: 'date' },
+    dataNascimento: { type: 'string', columnType: 'date' },
 
-    dataAdmissao: { type: 'date' },
+    dataAdmissao: { type: 'string', columnType: 'date' },
 
     estadoCivil: { type: 'string' },
 
@@ -33,13 +33,13 @@ module.exports = {
 
     nomeMae: { type: 'string' },
 
-    idadeServidor: { type: 'integer' },
+    idadeServidor: { type: 'number' },
 
     sexoServidor: { type: 'string' },
 
     vencimentoServidor: { type: 'string' },
 
-    dataPosse: { type: 'date' },
+    dataPosse: { type: 'string', columnType: 'date' },
 
     cpfServidor: { type: 'Documentos' },
 

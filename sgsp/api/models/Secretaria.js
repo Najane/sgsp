@@ -13,7 +13,7 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    codigoSec: { type: 'integer' },
+    codigoSec: { type: 'number' },
 
     descricaoSec: { type: 'string' }
 

@@ -15,7 +15,7 @@ module.exports = {
 
     numeroRG: { type: 'string' },
 
-    dataExpedicao: { type: 'date' },
+    dataExpedicao: { type: 'string', columnType: 'date' },
 
     orgaoExpeditor: { type: 'string' }
 

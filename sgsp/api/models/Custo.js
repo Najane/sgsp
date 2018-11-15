@@ -13,7 +13,7 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    codigoCusto: { type: 'integer' },
+    codigoCusto: { type: 'number' },
 
     descricaoCusto: { type: 'string' }
 
