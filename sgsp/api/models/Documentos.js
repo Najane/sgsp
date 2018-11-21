@@ -13,7 +13,7 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    cpfServidor: { type: 'string' },
+    cpfServidor: { type: 'string', required: true},
 
     tituloEleitor: { type: 'string' },
 
@@ -21,7 +21,7 @@ module.exports = {
 
     ctps: { type: 'string' },
 
-    servicoMilitar: { type: 'string' }
+    servicoMilitar: { type: 'string' },
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
@@ -31,6 +31,12 @@ module.exports = {
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
+
+    owner:{
+      model:'Servidor',
+      required: true,
+      //unique: true,
+    },
 
   },
 

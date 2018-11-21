@@ -41,29 +41,27 @@ module.exports = {
 
     dataPosse: { type: 'string', columnType: 'date' },
 
-    cpfServidor: { type: 'Documentos' },
+    //codigoEnd: { type: 'Endereco' },
 
-    codigoEnd: { type: 'Endereco' },
+    //codigoGrau: { type: 'GrauInstrucao' },
 
-    codigoGrau: { type: 'GrauInstrucao' },
+    //codigoCargo: { type: 'Cargo' },
 
-    codigoCargo: { type: 'Cargo' },
+    //numeroRG: { type: 'RegistroGeral' },
 
-    numeroRG: { type: 'RegistroGeral' },
+    //codigoDadosBanco: { type: 'DadosBancarios' },
 
-    codigoDadosBanco: { type: 'DadosBancarios' },
+    //codigoCor: { type: 'Cor' },
 
-    codigoCor: { type: 'Cor' },
+    //codigoPais: { type: 'Nacionalidade' },
 
-    codigoPais: { type: 'Nacionalidade' },
+    //codNatural: { type: 'Naturalidade' },
 
-    codNatural: { type: 'Naturalidade' },
+    //codigoCusto: { type: 'Custo' },
 
-    codigoCusto: { type: 'Custo' },
+    //codigoSec: { type: 'Secretaria' },
 
-    codigoSec: { type: 'Secretaria' },
-
-    servidorcol: { type: 'string' }
+    //servidorcol: { type: 'string' },
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
@@ -73,6 +71,11 @@ module.exports = {
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
+
+    cpfServidor: {
+      collection:'Documentos',
+      via: 'owner',
+    },
 
   },
 
