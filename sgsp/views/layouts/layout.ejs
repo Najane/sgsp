@@ -28,30 +28,35 @@
       <header id="page-header" class="navbar navbar-expand-sm navbar-dark bg-dark flex-column flex-md-row justify-content-between">
         <a class="navbar-brand mr-0" href="/">SGSP</a>
         <div class="navbar-nav flex-row">
+            <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/servidor">Servidor</a>
+            <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/cargo">Cargo</a>
+            <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/custo">Custo</a>
+            <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/secretaria">Secretaria</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
           <!-- LOGGED-IN NAVIGATION -->
           <% if(me) { %>
-          <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/contact">Help</a>
+          <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/contact">Contato</a>
           <!-- Only in desktop nav -->
           <div class="nav-item dropdown d-none d-sm-block">
-            <a class="nav-link dropdown-toggle" id="header-account-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+            <a class="nav-link dropdown-toggle" id="header-account-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Perfil</a>
             <div class="dropdown-menu account-menu" aria-labelledby="header-account-menu-link">
-              <a class="dropdown-item" href="/account">Settings</a>
-              <a class="dropdown-item" href="/logout">Sign out</a>
+              <a class="dropdown-item" href="/account">Configurações</a>
+              <a class="dropdown-item" href="/logout">Sair</a>
             </div>
           </div>
           <!-- Only in mobile nav -->
-          <a class="nav-item nav-link ml-2 mr-2 d-block d-sm-none" href="/account">Account Settings</a>
-          <a class="nav-item nav-link ml-2 mr-2 d-block d-sm-none" href="/logout">Sign out</a>
+          <a class="nav-item nav-link ml-2 mr-2 d-block d-sm-none" href="/account">Configurações</a>
+          <a class="nav-item nav-link ml-2 mr-2 d-block d-sm-none" href="/logout">Sair</a>
           <% } else { %>
           <!-- LOGGED-OUT NAVIGATION -->
-          <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/faq">FAQ</a>
-          <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/login">Log in</a>
+          <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/faq">Ajuda</a>
+          <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/login">Entrar</a>
           <!-- Only in desktop nav -->
           <div class="form-inline d-none ml-2 d-md-block" >
-            <a class="btn btn-outline-info" href="/signup">Sign up</a>
+            <a class="btn btn-outline-info" href="/signup">Criar conta</a>
           </div>
           <!-- Only in mobile nav -->
-          <a class="nav-item nav-link text-info ml-2 d-block d-md-none" href="/signup">Sign up</a>
+          <a class="nav-item nav-link text-info ml-2 d-block d-md-none" href="/signup">Criar conta</a>
           <% } %>
         </div>
       </header>

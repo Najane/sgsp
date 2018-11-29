@@ -147,6 +147,8 @@ Instead, just log it to the console.`,
     // > scanner to "check apks for malware".)
     var isToAddressConsideredFake = Boolean(inputs.to.match(/@example\.com$/i));
 
+    isToAddressConsideredFake = true; //Nunca verificar o email
+
     // If that's the case, or if we're in the "test" environment, then log
     // the email instead of sending it:
     if (sails.config.environment === 'test' || isToAddressConsideredFake) {
