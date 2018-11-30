@@ -62,13 +62,15 @@ module.exports = {
     //Nacionalidade
     pais: { type: 'string' },
 
+    //Naturalidade
+    cidadeNatural: { type: 'string' },
+    estadoNatural: { type: 'string' }
+
     //codigoEnd: { type: 'Endereco' },
 
     //codigoCargo: { type: 'Cargo' },
 
     //numeroRG: { type: 'RegistroGeral' },
-
-    //codNatural: { type: 'Naturalidade' },
 
     //codigoCusto: { type: 'Custo' },
 
