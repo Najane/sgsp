@@ -41,7 +41,7 @@ module.exports = {
 
     dataPosse: { type: 'string', columnType: 'date' },
 
-    //codigoEnd: { type: 'Endereco' },
+    descricaoCor: { type: 'string' },
 
     //codigoGrau: { type: 'GrauInstrucao' },
 
