@@ -33,8 +33,6 @@ module.exports = {
 
     nomeMae: { type: 'string' },
 
-    idadeServidor: { type: 'number' },
-
     sexoServidor: { type: 'string' },
 
     vencimentoServidor: { type: 'string' },
