@@ -7,14 +7,18 @@
 
 module.exports = {
 
+  
+  primaryKey: 'matricula',
+
   attributes: {
+    id: false,
 
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
     //Dados básicos
-    matricula: { type: 'string', unique: true },
+    matricula: { type: 'string', required:true, unique: true },
     nome: { type: 'string' },
     dataNascimento: { type: 'string', columnType: 'date' },
     dataAdmissao: { type: 'string', columnType: 'date' },
@@ -70,6 +74,16 @@ module.exports = {
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
+
+    cargo: {
+      model: 'Cargo'
+    },
+    Custo: {
+      model: 'Custo'
+    },
+    Secretaria: {
+      model: 'Secretaria'
+    }
 
   },
 
