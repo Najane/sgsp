@@ -1,13 +1,14 @@
 <div id="welcome">
-  <div class="container">
-    <h1>Consultar funcionário</h1>
+  <div class="container col-md-6">
+    <h1 class="text-center">Consultar funcionário</h1>
     <hr/>
-    <p> Selecione a categoria para encontrar um funcionário</p>
+    <p class="text-center"> Selecione a categoria para encontrar um funcionário</p>
+    <form action="servidor" >
     <div class="buttons">
       <div class="input-group">
         <input type="text" class="form-control" aria-label="Text input with dropdown button">
         <div class="input-group-append">
-          <button class="btn btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="#">SIAPE</a>
             <a class="dropdown-item" href="#">CPF</a>
@@ -18,6 +19,13 @@
         </div>
       </div>
     </div>
+    
+      </br>
+        <div class="container col-4">
+        <ajax-button  class="btn btn-outline-primary col align-self-center ">Buscar</ajax-button>
+        </div>
+     
+  </form>
   </div>
 
  
