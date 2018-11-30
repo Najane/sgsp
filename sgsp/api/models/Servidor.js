@@ -42,7 +42,7 @@ module.exports = {
     dataPosse: { type: 'string', columnType: 'date' },
 
     //Cor
-    descricaoCor: { type: 'string' },
+    cor: { type: 'string' },
 
     //Dados Bancarios
     nomeBanco: { type: 'string' },
@@ -57,15 +57,16 @@ module.exports = {
     servicoMilitar: { type: 'string' },
 
     //Grau de instrucao
-    descricaoGrau: { type: 'string' }
+    grauInstrucao: { type: 'string' },
+
+    //Nacionalidade
+    pais: { type: 'string' },
 
     //codigoEnd: { type: 'Endereco' },
 
     //codigoCargo: { type: 'Cargo' },
 
     //numeroRG: { type: 'RegistroGeral' },
-
-    //codigoPais: { type: 'Nacionalidade' },
 
     //codNatural: { type: 'Naturalidade' },
 
