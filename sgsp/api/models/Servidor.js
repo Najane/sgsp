@@ -50,6 +50,9 @@ module.exports = {
     numeroConta: { type: 'string' },
 
     //Documentos
+    numeroRG: { type: 'string' },
+    dataExpedicao: { type: 'string', columnType: 'date' },
+    orgaoExpeditor: { type: 'string' },
     cpfServidor: { type: 'string', required: true},
     tituloEleitor: { type: 'string' },
     pispasep: { type: 'string' },
@@ -63,14 +66,12 @@ module.exports = {
     pais: { type: 'string' },
 
     //Naturalidade
-    cidadeNatural: { type: 'string' },
-    estadoNatural: { type: 'string' }
+    estado: { type: 'string' },
+    cidade: { type: 'string' },
 
     //codigoEnd: { type: 'Endereco' },
 
     //codigoCargo: { type: 'Cargo' },
-
-    //numeroRG: { type: 'RegistroGeral' },
 
     //codigoCusto: { type: 'Custo' },
 
