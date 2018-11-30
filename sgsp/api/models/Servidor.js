@@ -13,30 +13,18 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    codigoServidor: { type: 'string' },
-
-    matriculaServidor: { type: 'string' },
-
-    nomeCompleto: { type: 'string' },
-
+    //Dados básicos
+    matricula: { type: 'string', unique: true },
+    nome: { type: 'string' },
     dataNascimento: { type: 'string', columnType: 'date' },
-
     dataAdmissao: { type: 'string', columnType: 'date' },
-
     estadoCivil: { type: 'string' },
-
     telefone1: { type: 'string' },
-
     telefone2: { type: 'string' },
-
     nomePai: { type: 'string' },
-
     nomeMae: { type: 'string' },
-
     sexoServidor: { type: 'string' },
-
     vencimentoServidor: { type: 'string' },
-
     dataPosse: { type: 'string', columnType: 'date' },
 
     //Cor
