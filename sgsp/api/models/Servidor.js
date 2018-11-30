@@ -56,9 +56,10 @@ module.exports = {
     ctps: { type: 'string' },
     servicoMilitar: { type: 'string' },
 
-    //codigoEnd: { type: 'Endereco' },
+    //Grau de instrucao
+    descricaoGrau: { type: 'string' }
 
-    //codigoGrau: { type: 'GrauInstrucao' },
+    //codigoEnd: { type: 'Endereco' },
 
     //codigoCargo: { type: 'Cargo' },
 
