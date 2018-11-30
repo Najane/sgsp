@@ -28,13 +28,16 @@
       <header id="page-header" class="navbar navbar-expand-sm navbar-dark bg-dark flex-column flex-md-row justify-content-between">
         <a class="navbar-brand mr-0" href="/">SGSP</a>
         <div class="navbar-nav flex-row">
+            
+          <!-- LOGGED-IN NAVIGATION -->
+          <% if(me) { %>
+
             <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/servidor">Servidor</a>
             <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/cargo">Cargo</a>
             <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/custo">Custo</a>
             <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/secretaria">Secretaria</a>
             &nbsp;&nbsp;&nbsp;&nbsp;
-          <!-- LOGGED-IN NAVIGATION -->
-          <% if(me) { %>
+
           <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/contact">Contato</a>
           <!-- Only in desktop nav -->
           <div class="nav-item dropdown d-none d-sm-block">
@@ -49,7 +52,6 @@
           <a class="nav-item nav-link ml-2 mr-2 d-block d-sm-none" href="/logout">Sair</a>
           <% } else { %>
           <!-- LOGGED-OUT NAVIGATION -->
-          <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/faq">Ajuda</a>
           <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/login">Entrar</a>
           <!-- Only in desktop nav -->
           <div class="form-inline d-none ml-2 d-md-block" >
@@ -87,7 +89,7 @@
           <small class="nav-item"><a class="nav-link text-info" href="/logout">Sign out</a></small>
           <% } %>
         </div>
-        <small class="copy">Copyright &copy; 2018 NEW_APP_COMPANY. <br class="xs-only"/>All rights reserved.</small>
+        <small class="copy">Copyright &copy; 2018 SGSP. <br class="xs-only"/>Todos os Direitos Reservados.</small>
       </footer>
     </div>
 
