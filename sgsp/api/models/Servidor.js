@@ -49,6 +49,13 @@ module.exports = {
     agenciaBanco: { type: 'string' },
     numeroConta: { type: 'string' },
 
+    //Documentos
+    cpfServidor: { type: 'string', required: true},
+    tituloEleitor: { type: 'string' },
+    pispasep: { type: 'string' },
+    ctps: { type: 'string' },
+    servicoMilitar: { type: 'string' },
+
     //codigoEnd: { type: 'Endereco' },
 
     //codigoGrau: { type: 'GrauInstrucao' },
@@ -56,10 +63,6 @@ module.exports = {
     //codigoCargo: { type: 'Cargo' },
 
     //numeroRG: { type: 'RegistroGeral' },
-
-    //codigoDadosBanco: { type: 'DadosBancarios' },
-
-    //codigoCor: { type: 'Cor' },
 
     //codigoPais: { type: 'Nacionalidade' },
 
@@ -80,10 +83,7 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
-    cpfServidor: {
-      collection:'Documentos',
-      via: 'owner',
-    },
+
 
   },
 
