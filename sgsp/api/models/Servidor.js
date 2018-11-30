@@ -26,7 +26,7 @@ module.exports = {
     sexoServidor: { type: 'string' },
     vencimentoServidor: { type: 'string' },
     dataPosse: { type: 'string', columnType: 'date' },
-
+    
     //Cor
     cor: { type: 'string' },
 
@@ -36,14 +36,14 @@ module.exports = {
     numeroConta: { type: 'string' },
 
     //Documentos
-    numeroRG: { type: 'string' },
+    numeroRG: { type: 'string', required: true, unique: true },
     dataExpedicao: { type: 'string', columnType: 'date' },
-    orgaoExpeditor: { type: 'string' },
-    cpfServidor: { type: 'string', required: true},
+    orgaoExpeditor: { type: 'string', required: true },
+    cpfServidor: { type: 'string', required: true, unique: true},
     tituloEleitor: { type: 'string' },
     pispasep: { type: 'string' },
     ctps: { type: 'string' },
-    servicoMilitar: { type: 'string' },
+    certificadoReservista: { type: 'string' },
 
     //Grau de instrucao
     grauInstrucao: { type: 'string' },
@@ -63,18 +63,13 @@ module.exports = {
 
     //codigoSec: { type: 'Secretaria' },
 
-    //servidorcol: { type: 'string' },
-
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
 
-
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
-
-
 
   },
 
