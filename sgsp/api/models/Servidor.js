@@ -41,7 +41,15 @@ module.exports = {
 
     dataPosse: { type: 'string', columnType: 'date' },
 
+    //Cor
     descricaoCor: { type: 'string' },
+
+    //Dados Bancarios
+    nomeBanco: { type: 'string' },
+    agenciaBanco: { type: 'string' },
+    numeroConta: { type: 'string' },
+
+    //codigoEnd: { type: 'Endereco' },
 
     //codigoGrau: { type: 'GrauInstrucao' },
 
