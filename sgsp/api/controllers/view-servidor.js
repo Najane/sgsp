@@ -16,10 +16,9 @@ module.exports = {
   },
 
 
-  fn: async function () {
+  fn: async function (inputs, exits) {
 
     // Respond with view.
-    //return {};
     return exits.success(); 
 
   }

@@ -34,10 +34,10 @@ module.exports.routes = {
   'GET /account/password':   { action: 'account/view-edit-password' },
   'GET /account/profile':    { action: 'account/view-edit-profile' },
 
-  'GET /servidor':            { view: 'pages/servidor' },
-  'GET /cargo':            { view: 'pages/cargo' },
-  'GET /custo':            { view: 'pages/custo' },
-  'GET /secretaria':            { view: 'pages/secretaria' },
+  'GET /servidor':           { action: 'view-servidor' },
+  'GET /cargo':              { action: 'view-cargo' },
+  'GET /custo':              { action: 'view-custo' },
+  'GET /secretaria':         { action: 'view-secretaria' },
 
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
