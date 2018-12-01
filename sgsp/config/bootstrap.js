@@ -62,6 +62,8 @@ module.exports.bootstrap = async function(done) {
   await User.createEach([
     { emailAddress: 'admin@example.com', fullName: 'Ryan Dahl', isSuperAdmin: true, password: await sails.helpers.passwords.hashPassword('abc123') },
   ]);
+
+  // Secretaria ----------------------------
   await Secretaria.createEach([
     { nome: 'Urbanização' },
   ]);
@@ -79,6 +81,49 @@ module.exports.bootstrap = async function(done) {
   ]);
   await Secretaria.createEach([
     { nome: 'Cultura' },
+  ]);
+
+    // Custo ----------------------------
+    await Custo.createEach([
+      { nome: 'Administração' },
+    ]);
+    await Custo.createEach([
+      { nome: 'Contabilidade' },
+    ]);
+    await Custo.createEach([
+      { nome: 'Limpeza' },
+    ]);
+    await Custo.createEach([
+      { nome: '' },
+    ]);
+  
+  // Cargo ----------------------------
+  await Cargo.createEach([
+    { nome: 'Secretario' },
+  ]);
+  await Cargo.createEach([
+    { nome: 'Gerente' },
+  ]);
+  await Cargo.createEach([
+    { nome: 'Professor' },
+  ]);
+  await Cargo.createEach([
+    { nome: 'Merendeira' },
+  ]);
+  await Cargo.createEach([
+    { nome: 'Vigia' },
+  ]);
+  await Cargo.createEach([
+    { nome: 'Cultura' },
+  ]);
+  await Cargo.createEach([
+    { nome: 'Assistente Administrativo' },
+  ]);
+  await Cargo.createEach([
+    { nome: 'Auxiliar Administrativo' },
+  ]);
+  await Cargo.createEach([
+    { nome: 'Agente de saúde' },
   ]);
 
   // Save new bootstrap version
