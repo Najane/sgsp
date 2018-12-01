@@ -62,6 +62,24 @@ module.exports.bootstrap = async function(done) {
   await User.createEach([
     { emailAddress: 'admin@example.com', fullName: 'Ryan Dahl', isSuperAdmin: true, password: await sails.helpers.passwords.hashPassword('abc123') },
   ]);
+  await Secretaria.createEach([
+    { nome: 'Urbanização' },
+  ]);
+  await Secretaria.createEach([
+    { nome: 'Saude' },
+  ]);
+  await Secretaria.createEach([
+    { nome: 'Esporte' },
+  ]);
+  await Secretaria.createEach([
+    { nome: 'Segurança' },
+  ]);
+  await Secretaria.createEach([
+    { nome: 'Educação' },
+  ]);
+  await Secretaria.createEach([
+    { nome: 'Cultura' },
+  ]);
 
   // Save new bootstrap version
   await sails.helpers.fs.writeJson.with({
