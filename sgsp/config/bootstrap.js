@@ -94,7 +94,7 @@ module.exports.bootstrap = async function(done) {
     { nome: 'Limpeza' },
   ]);
   await Custo.createEach([
-    { nome: '' },
+    { nome: 'Manutenção' },
   ]);
   
   // Cargo ----------------------------
