@@ -83,19 +83,19 @@ module.exports.bootstrap = async function(done) {
     { nome: 'Cultura' },
   ]);
 
-    // Custo ----------------------------
-    await Custo.createEach([
-      { nome: 'Administração' },
-    ]);
-    await Custo.createEach([
-      { nome: 'Contabilidade' },
-    ]);
-    await Custo.createEach([
-      { nome: 'Limpeza' },
-    ]);
-    await Custo.createEach([
-      { nome: '' },
-    ]);
+  // Custo ----------------------------
+  await Custo.createEach([
+    { nome: 'Administração' },
+  ]);
+  await Custo.createEach([
+    { nome: 'Contabilidade' },
+  ]);
+  await Custo.createEach([
+    { nome: 'Limpeza' },
+  ]);
+  await Custo.createEach([
+    { nome: '' },
+  ]);
   
   // Cargo ----------------------------
   await Cargo.createEach([
