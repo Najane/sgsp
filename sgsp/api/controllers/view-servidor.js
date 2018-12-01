@@ -19,7 +19,10 @@ module.exports = {
   fn: async function (inputs, exits) {
 
     // Respond with view.
-    return exits.success(); 
+    var cargos = await Cargo.find();
+    return exits.success({
+      cargos: cargos
+    }); 
 
   }
 
