@@ -3,5 +3,28 @@
   <h1>TODO: Implement this page.</h1>
   <p>(See also <em>assets/styles/pages/listarServidores.less</em>, <em>assets/js/pages/listarServidores.page.js</em>, and <em>api/controllers/view-listar-servidores.js</em>.)</p>
 
+  Incluir
+  <table border="1">
+    <tr>
+      <th>Matricula</th>
+      <th>Nome</th>
+      <th>Secretaria</th>
+      <th>Cargo</th>
+      <th colspan="2"></th>
+    </tr>
+    
+    <% _.each(servidores, function (servidor) { %>
+      <tr>
+        <td><%= servidor.matricula %></td>
+        <td><%= servidor.nome %></td>
+        <td><%= servidor.Secretaria?servidor.Secretaria.nome:'nenhum' %></td>
+        <td><%= servidor.Cargo?servidor.Cargo.nome:'nenhum' %></td>
+        <td><p onmouseover="this.style='background-color:powderblue;'" onmouseout="this.style=''">Editar Excluir</p></td>
+      <tr>
+    <% }) %>
+    
+  </table>
+  Incluir
+
 </div>
 <%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>

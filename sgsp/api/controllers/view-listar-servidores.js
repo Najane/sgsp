@@ -10,16 +10,19 @@ module.exports = {
   exits: {
 
     success: {
-      viewTemplatePath: 'pages/listar-servidores'
+      viewTemplatePath: 'pages/listarServidores'
     }
 
   },
 
 
-  fn: async function () {
+  fn: async function (input, exits) {
 
     // Respond with view.
-    return {};
+    var servidores = await Servidor.find();
+    return exits.success({
+      servidores: servidores
+    });
 
   }
 
