@@ -1,14 +1,10 @@
-<div id="listar-servidores" v-cloak>
-
-  <h1>TODO: Implement this page.</h1>
-  <p>(See also <em>assets/styles/pages/listarServidores.less</em>, <em>assets/js/pages/listarServidores.page.js</em>, and <em>api/controllers/view-listar-servidores.js</em>.)</p>
-
+<div id="listar-servidores " v-cloak>
   <form id="formListarServidores" action="/servidor">
     <input type="hidden" name="regSendoEditado" id="regSendoEditado">
   </form>
-
-  Incluir
-  <table border="1">
+  <div id="list" class="row">
+  <div class="table-responsive col-md-8">
+  <table class="table table-striped" cellspacing="0" cellpadding="0">
     <tr>
       <th>Matricula</th>
       <th>Nome</th>
@@ -23,12 +19,15 @@
         <td><%= servidor.nome %></td>
         <td><%= servidor.Secretaria?servidor.Secretaria.nome:'nenhum' %></td>
         <td><%= servidor.Cargo?servidor.Cargo.nome:'nenhum' %></td>
-        <td><button type="button" onclick="exibirEdicaoDoServidor('<%= servidor.matricula %>')" class="btn btn-primary btn-sm">Editar</button></td>
-      <tr>
-    <% }) %>
-    
+        <td class="actions">
+          <a class="btn btn-success btn-xs" href="view.html" >Visualizar</a>
+          <a class="btn btn-warning btn-xs" onclick="exibirEdicaoDoServidor('<%= servidor.matricula %>')">Editar</a>
+          <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+      </td> 
+        <tr>
+    <% }) %>    
   </table>
-  Incluir
-
+  </div>
+</div>
 </div>
 <%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>
