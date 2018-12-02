@@ -51,6 +51,7 @@ module.exports = {
       });
 
       return exits.success({
+        regSendoEditado: inputs.regSendoEditado,
         cargos: cargos,
         nome: servidor.nome,
         matricula: servidor.matricula,

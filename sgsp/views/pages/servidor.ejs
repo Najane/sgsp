@@ -1,6 +1,6 @@
 <div id="servidor" v-cloak>
   <div class="container col-md-6" >
-    <h1 class="text-center">Cadastrar Funcionário</h1>
+    <h1 class="text-center"><%= (typeof(regSendoEditado) !== 'undefined' ? 'Editar':'Cadastrar') %> Funcionário</h1>
     <div class="servidor-form">
           <hr/>
       <form action="servidor" method="POST" >
