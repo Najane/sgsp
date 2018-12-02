@@ -20,8 +20,8 @@ module.exports = {
     //Dados básicos
     matricula: { type: 'string', required:true, unique: true },
     nome: { type: 'string' },
-    dataNascimento: { type: 'string', columnType: 'date' },
-    dataAdmissao: { type: 'string', columnType: 'date' },
+    dataNascimento: { type: 'ref', columnType: 'date' },
+    dataAdmissao: { type: 'string'/*, columnType: 'date' */},
     estadoCivil: { type: 'string' },
     telefone1: { type: 'string' },
     telefone2: { type: 'string' },
@@ -29,7 +29,7 @@ module.exports = {
     nomeMae: { type: 'string' },
     sexoServidor: { type: 'string' },
     vencimentoServidor: { type: 'string' },
-    dataPosse: { type: 'string', columnType: 'date' },
+    dataPosse: { type: 'string'/*, columnType: 'date' */},
     
     //Cor
     cor: { type: 'string' },
@@ -40,10 +40,10 @@ module.exports = {
     numeroConta: { type: 'string' },
 
     //Documentos
-    numeroRG: { type: 'string', required: true, unique: true },
-    dataExpedicao: { type: 'string', columnType: 'date' },
-    orgaoExpeditor: { type: 'string', required: true },
-    cpfServidor: { type: 'string', required: true, unique: true},
+    numeroRG: { type: 'string', required: false, unique: true },
+    dataExpedicao: { type: 'string', /*columnType: 'date'*/ },
+    orgaoExpeditor: { type: 'string', required: false },
+    cpfServidor: { type: 'string', required: false, unique: true},
     tituloEleitor: { type: 'string' },
     pispasep: { type: 'string' },
     ctps: { type: 'string' },

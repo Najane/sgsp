@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<% if (typeof me == 'undefined') { 
+  me = false;
+}%>
 <html>
   <head>
     <title>SGSP</title>
@@ -30,7 +33,7 @@
         <div class="navbar-nav flex-row">
             
           <!-- LOGGED-IN NAVIGATION -->
-          <% if(me) { %>
+          <% if (typeof me !== 'undefined') { %>
 
             <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/servidor">Servidor</a>
             <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/cargo">Cargo</a>
