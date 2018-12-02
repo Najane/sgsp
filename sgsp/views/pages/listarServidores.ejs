@@ -1,8 +1,8 @@
-<div id="listar-servidores " v-cloak>
+<div id="listar-servidores" v-cloak>
+  
   <form id="formListarServidores" action="/servidor">
     <input type="hidden" name="regSendoEditado" id="regSendoEditado">
   </form>
-  <div id="list" class="row">
   <div class="table-responsive col-md-8">
   <table class="table table-striped" cellspacing="0" cellpadding="0">
     <tr>
@@ -25,9 +25,11 @@
           <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
       </td> 
         <tr>
-    <% }) %>    
+    <% }) %>
+    
   </table>
   </div>
-</div>
+
+
 </div>
 <%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>
