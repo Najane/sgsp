@@ -126,6 +126,50 @@ module.exports.bootstrap = async function(done) {
     { nome: 'Agente de saúde' },
   ]);
 
+  // Cargo ----------------------------
+  await Servidor.createEach([
+    { matricula: '543675',
+      nome: 'João da Silva Chavier',
+      dataNascimento: '1981-12-31',
+      numeroRG: '098765',
+      cpf: '098765' },
+  ]);
+  await Servidor.createEach([
+    { matricula: '207487',
+      nome: 'Joaquim nabuco donosor',
+      dataNascimento: '1981-12-31',
+      numeroRG: '098766',
+      cpf: '098766' },
+  ]);
+  await Servidor.createEach([
+    { matricula: '140985',
+      nome: 'Mestre Pai Mei',
+      dataNascimento: '1981-12-31',
+      numeroRG: '098767',
+      cpf: '098767' },
+  ]);
+  await Servidor.createEach([
+    { matricula: '021498',
+      nome: 'Mestre Kan',
+      dataNascimento: '1981-12-31',
+      numeroRG: '098768',
+      cpf: '098768' },
+  ]);
+  await Servidor.createEach([
+    { matricula: '098345',
+      nome: 'Goku Chan',
+      dataNascimento: '1981-12-31',
+      numeroRG: '098769',
+      cpf: '098769' },
+  ]);
+  await Servidor.createEach([
+    { matricula: '098432',
+      nome: 'Jhon Snow',
+      dataNascimento: '1981-12-31',
+      numeroRG: '098770',
+      cpf: '098779' },
+  ]);
+
   // Save new bootstrap version
   await sails.helpers.fs.writeJson.with({
     destination: bootstrapLastRunInfoPath,

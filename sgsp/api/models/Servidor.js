@@ -43,7 +43,7 @@ module.exports = {
     numeroRG: { type: 'string', required: false, unique: true },
     dataExpedicao: { type: 'string', /*columnType: 'date'*/ },
     orgaoExpeditor: { type: 'string', required: false },
-    cpfServidor: { type: 'string', required: false, unique: true},
+    cpf: { type: 'string', required: false, unique: true},
     tituloEleitor: { type: 'string' },
     pispasep: { type: 'string' },
     ctps: { type: 'string' },
