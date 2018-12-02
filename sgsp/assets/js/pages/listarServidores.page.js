@@ -24,3 +24,10 @@ parasails.registerPage('listar-servidores', {
     //…
   }
 });
+
+function exibirEdicaoDoServidor(mat){
+  var formListarServidores = document.getElementById('formListarServidores');
+  var regSendoEditado = document.getElementById('regSendoEditado');
+  regSendoEditado.value = mat;
+  formListarServidores.submit();
+}

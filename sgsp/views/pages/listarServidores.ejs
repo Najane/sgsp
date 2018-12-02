@@ -3,6 +3,10 @@
   <h1>TODO: Implement this page.</h1>
   <p>(See also <em>assets/styles/pages/listarServidores.less</em>, <em>assets/js/pages/listarServidores.page.js</em>, and <em>api/controllers/view-listar-servidores.js</em>.)</p>
 
+  <form id="formListarServidores" action="/servidor">
+    <input type="hidden" name="regSendoEditado" id="regSendoEditado">
+  </form>
+
   Incluir
   <table border="1">
     <tr>
@@ -19,7 +23,7 @@
         <td><%= servidor.nome %></td>
         <td><%= servidor.Secretaria?servidor.Secretaria.nome:'nenhum' %></td>
         <td><%= servidor.Cargo?servidor.Cargo.nome:'nenhum' %></td>
-        <td><p onmouseover="this.style='background-color:powderblue;'" onmouseout="this.style=''">Editar Excluir</p></td>
+        <td><button type="button" onclick="exibirEdicaoDoServidor('<%= servidor.matricula %>')" class="btn btn-primary btn-sm">Editar</button></td>
       <tr>
     <% }) %>
     

@@ -1,12 +1,13 @@
 module.exports = {
-
-
   friendlyName: 'View servidor',
-
-
   description: 'Display "Servidor" page.',
 
   inputs: {
+
+    regSendoEditado:{
+      type: 'string',
+    },
+
     nome: {
       type: 'string',
     },
@@ -35,38 +36,70 @@ module.exports = {
 
 
   fn: async function (inputs, exits) {
-    // Respond with view.
-    console.log('POST->'+JSON.stringify(inputs));
-    console.log('NOME->'+inputs.nome);
+    //Combo
+    var cargos = await Cargo.find();
+    var servidor;
 
+    console.log('POST->'+JSON.stringify(inputs));
+
+    
+    if(typeof(inputs.regSendoEditado) !== 'undefined'){
+      //Exibir cadastro para alterar
+
+      servidor = await Servidor.findOne({
+        matricula: inputs.regSendoEditado
+      });
+
+      return exits.success({
+        cargos: cargos,
+        nome: servidor.nome,
+        matricula: servidor.matricula,
+        dataNascimento: servidor.dataNascimento,
+      }); 
+
+      //var servidores = await Servidor.find().limit(1);
+      //var serv = clone(inputs);
+      //delete serv.regSendoEditado;
+      //await Servidor.createEach([
+      //  inputs,
+      //]);
+    }else{
+      return exits.success({
+        cargos: cargos,
+        nome: '',
+        matricula: '',
+        dataNascimento: null,
+      }); 
+    }
+
+    /*
     if(typeof(inputs.nome) !== 'undefined'){
+      var serv = clone(inputs);
+      delete serv.regSendoEditado;
       await Servidor.createEach([
         inputs,
       ]);
+
+      
+    }else{
+      
     }
 
+    
     var servidores = await Servidor.find().limit(1);
     var nome = null;
     var matricula = null;
     var dataNascimento = null;
 
-    var servidor;
+    
     if(typeof(servidores[0]) !== 'undefined'){
       servidor = servidores[0];
       nome = servidor.nome;
       matricula = servidor.matricula;
       dataNascimento = servidor.dataNascimento;
-    }
+    }*/
 
-    var cargos = await Cargo.find();
-    console.log('LEN->'+typeof(servidores));
-    console.log('SERS ->'+JSON.stringify(servidores));
-    console.log('SER 0->'+JSON.stringify(servidor));
-    return exits.success({
-      cargos: cargos,
-      nome: nome,
-      matricula: matricula,
-      dataNascimento: dataNascimento,
-    }); 
+    
+
   }
 };
