@@ -64,9 +64,10 @@ module.exports = {
           delete inputs.matricula;
           console.log('UPDATE'+JSON.stringify(inputs));
           var updatedUsers = await Servidor.update({matricula: mat})
-          .set({
+          .set(
             inputs
-          });
+          )
+          .fetch();
           console.log(JSON.stringify(updatedUsers));
         }
         
