@@ -132,7 +132,9 @@ module.exports.bootstrap = async function(done) {
       nome: 'João da Silva Chavier',
       dataNascimento: '1981-12-31',
       numeroRG: '098765',
-      cpf: '098765' },
+      cpf: '098765',
+      cargo: 'Secretario',
+    },
   ]);
   await Servidor.createEach([
     { matricula: '207487',

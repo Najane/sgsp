@@ -50,27 +50,26 @@ module.exports = {
         matricula: inputs.regSendoEditado
       });
 
+      console.log(JSON.stringify(servidor));
+
       return exits.success({
         regSendoEditado: inputs.regSendoEditado,
         cargos: cargos,
+        cargo: servidor.cargo,
         nome: servidor.nome,
         matricula: servidor.matricula,
         dataNascimento: servidor.dataNascimento,
-      }); 
+        
+      });
 
-      //var servidores = await Servidor.find().limit(1);
-      //var serv = clone(inputs);
-      //delete serv.regSendoEditado;
-      //await Servidor.createEach([
-      //  inputs,
-      //]);
     }else{
       return exits.success({
         cargos: cargos,
+        cargo: '',
         nome: '',
         matricula: '',
         dataNascimento: null,
-      }); 
+      });
     }
 
     /*

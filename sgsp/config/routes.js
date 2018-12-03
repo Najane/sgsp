@@ -34,8 +34,8 @@ module.exports.routes = {
   'GET /account/password':   { action: 'account/view-edit-password' },
   'GET /account/profile':    { action: 'account/view-edit-profile' },
 
-  'GET  /servidor':           { action: 'view-servidor' },
-  'POST /servidor':           { action: 'view-servidor' },
+  '/servidor':               { action: 'view-servidor' },
+  '/servidor/salvar':        { action: 'servidor/servidor-salvar' },
   '/cargo':                   { action: 'view-cargo' },
   '/custo':              { action: 'view-custo' },
   '/secretaria':         { action: 'view-secretaria' },

@@ -27,12 +27,18 @@ module.exports = {
     telefone2: { type: 'string' },
     nomePai: { type: 'string' },
     nomeMae: { type: 'string' },
-    sexoServidor: { type: 'string' },
-    vencimentoServidor: { type: 'string' },
-    dataPosse: { type: 'string'/*, columnType: 'date' */},
-    
-    //Cor
+    sexo: { type: 'string' },
     cor: { type: 'string' },
+    
+
+    //Endereço
+    numeroEnd : { type: 'string' },
+    logradouroEnd: { type: 'string' },
+    bairroEnd: { type: 'string' },
+    cidadeEnd: { type: 'string' },
+    estadoEnd: { type: 'string' },
+    cepEnd: { type: 'string' },
+    
 
     //Dados Bancarios
     nomeBanco: { type: 'string' },
@@ -67,6 +73,10 @@ module.exports = {
 
     //codigoSec: { type: 'Secretaria' },
 
+    //
+    vencimentoServidor: { type: 'string' },
+    dataPosse: { type: 'string'/*, columnType: 'date' */},
+
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
@@ -78,10 +88,10 @@ module.exports = {
     cargo: {
       model: 'Cargo'
     },
-    Custo: {
+    custo: {
       model: 'Custo'
     },
-    Secretaria: {
+    secretaria: {
       model: 'Secretaria'
     }
 
