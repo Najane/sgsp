@@ -50,17 +50,24 @@ module.exports = {
         matricula: inputs.regSendoEditado
       });
 
+      servidor.regSendoEditado = inputs.regSendoEditado;
+      servidor.cargos = cargos;
+
+
       console.log(JSON.stringify(servidor));
 
-      return exits.success({
+      return exits.success(servidor);
+      
+
+      /*return exits.success({
         regSendoEditado: inputs.regSendoEditado,
         cargos: cargos,
+
         cargo: servidor.cargo,
         nome: servidor.nome,
         matricula: servidor.matricula,
-        dataNascimento: servidor.dataNascimento,
-        
-      });
+        dataNascimento: servidor.dataNascimento, 
+      });*/
 
     }else{
       return exits.success({
@@ -71,35 +78,6 @@ module.exports = {
         dataNascimento: null,
       });
     }
-
-    /*
-    if(typeof(inputs.nome) !== 'undefined'){
-      var serv = clone(inputs);
-      delete serv.regSendoEditado;
-      await Servidor.createEach([
-        inputs,
-      ]);
-
-      
-    }else{
-      
-    }
-
-    
-    var servidores = await Servidor.find().limit(1);
-    var nome = null;
-    var matricula = null;
-    var dataNascimento = null;
-
-    
-    if(typeof(servidores[0]) !== 'undefined'){
-      servidor = servidores[0];
-      nome = servidor.nome;
-      matricula = servidor.matricula;
-      dataNascimento = servidor.dataNascimento;
-    }*/
-
-    
 
   }
 };
