@@ -3,7 +3,7 @@ module.exports = {
     description: 'Salva registro.',
   
     inputs: {
-        matricula: { type: 'string'},
+        matricula: { type: 'string'},        
         nome: { type: 'string' },
         dataNascimento: { type: 'string' },
         dataAdmissao: { type: 'string'},
@@ -49,10 +49,29 @@ module.exports = {
     },
   
     fn: async function (inputs, exits) {
-        await Servidor.createEach([
+        servidor = await Servidor.findOne({
+          matricula: inputs.matricula
+        });
+
+        if(servidor == null){
+          //Novo
+          await Servidor.createEach([
             inputs,
           ]);
-        throw { redirect: '/pesquisar'};
+        }else{
+          //Atualizar
+          var mat = inputs.matricula;
+          delete inputs.matricula;
+          console.log('UPDATE'+JSON.stringify(inputs));
+          var updatedUsers = await Servidor.update({matricula: mat})
+          .set({
+            inputs
+          });
+          console.log(JSON.stringify(updatedUsers));
+        }
+        
+        //throw { redirect: '/pesquisar'};
+        return exits.redirect('/pesquisar');
     }
   };
   
