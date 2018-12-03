@@ -1,62 +1,219 @@
-<div id="servidor" v-cloak>
-  <div class="container col-md-6" >
-    <h1 class="text-center"><%= (typeof(regSendoEditado) !== 'undefined' ? 'Editar':'Cadastrar') %> Funcionário</h1>
-    <div class="servidor-form">
-          <hr/>
-      <form action="/servidor/salvar" method="POST" >
-          <input type="hidden" name="_csrf" value="<%= _csrf %>" />
-        <div class="form-group">
-          <label for="nome">Nome</label>
-          <input class="form-control" id="nome" name="nome" value="<%=nome%>" type="text" placeholder="Nome" >
-        </div>
-        <div class="form-group">
-          <label for="matricula">Matricula</label>
-          <input class="form-control" id="matricula" name="matricula" value="<%=matricula%>"  type="text" placeholder="Matricula" >
-        </div>
-        <div class="form-group">
-          <div class="row">
-            <div class="col-md-4 ">
-                
-              <label for="data_nasci">Data de Nascimento</label>
-              <input class="form-control"
-              value="<%=(dataNascimento !== null)?dataNascimento.toISOString().substring(0,10):''%>"
-              id="data_nasci" name="dataNascimento" type="date"   placeholder="Data de Nascimento" >
+<div class="container col-md-8">
+  <br>
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Dados Básicos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="end-tab" data-toggle="tab" href="#end" role="tab" aria-controls="end" aria-selected="false">Endereço</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Dados Bancarios</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Documentos</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <!-- dados basicos -->
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <h1 class="text-center"><%= (typeof(regSendoEditado) !== 'undefined' ? 'Editar':'Cadastrar') %> Funcionário</h1>
+        <div class="servidor-form">             
+          <form action="/servidor/salvar" method="POST" >
+              <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input class="form-control" id="nome" name="nome" value="<%=nome%>" type="text" placeholder="Nome" >
             </div>
-            <div class="col-md-8">
-
-                <label for="nomeCargo">Selecione um cargo</label><br>
-                <div class="input-group mb-3">
-                    
-                    <div class="input-group-prepend">
-                        
-                      <label class="input-group-text" for="inputGroupSelect01">Cargo</label>
-                    </div>
-                    <select class="custom-select" id="inputGroupSelect01" name="cargo">
-                      <option selected></option>
-                      <% _.each(cargos, function (cargoOpc) { %>
-                        <option <%= (cargo == cargoOpc.nome ? "selected='selected'" : "" ) %> value="<%=cargoOpc.nome%>" ><%=cargoOpc.nome%></option>
-                      <% }) %>
+            <div class="form-group">
+                <label for="nomePai">Nome do Pai</label>
+                <input class="form-control"  name="nomePai" value="" type="text" placeholder="Nome do Pai" >
+              </div>
+            <div class="form-group">
+                  <label for="nomeMae">Nome da Mãe</label>
+                  <input class="form-control"  name="nomeMae" value="" type="text" placeholder="Nome da Mãe" >
+                </div>
+            <div class="form-group">
+                <div class="row">
+                  <div class="col-md-4">
+                    <label for="matricula">Matricula</label>
+                    <input class="form-control" id="matricula" name="matricula" value="<%=matricula%>"  type="text" placeholder="Matricula" >
+                  </div>
+                  <div class="col-md-4">
+                      <label for="sexo">Sexo</label>
+                      <select  class="form-control" id="sexo"name="sexo">
+                          <option>Femenino</option>
+                          <option>Masculino</option>
+                          <option>Outros</option>
+                      </select>
+                    </div>               
+                <div class="col-md-4">
+                    <label for="cor">Cor</label>
+                    <select  class="form-control" id="cor"name="cor">
+                        <option>Branco</option>
+                        <option>Amarelo</option>
+                        <option>Pardo</option>
+                        <option>Negro</option>
+                        <option>Indigena</option>
                     </select>
                   </div>
+                </div>
+              </div>
             </div>
-        </div>
-      </div>
-     
-      <hr/>
-      <br>
-      <div class="form-group text-center">
-          <div class="col-md-12 ">
-            <input type="submit" value="Salvar" class="btn btn-outline-primary col-md-4 " />
-            <a href="/pesquisar" class="btn btn-outline-secondary col-md-4">Cancelar</a>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-4 ">
+                  <label for="data_nasci">Data de Nascimento</label>
+                  <input class="form-control"
+                  value="<%=(dataNascimento !== null)?dataNascimento.toISOString().substring(0,10):''%>"
+                  id="data_nasci" name="dataNascimento" type="date"   placeholder="Data de Nascimento" >
+                </div>
+                <div class="col-md-4 ">
+                    <label for="dataAdmi">Data de Admissão</label>
+                    <input class="form-control"
+                    value="admissao"name="dataAdmissao" type="date"   placeholder="Data de Admissão" >
+                  </div>
+                  <div class="col-md-4">
+                      <label for="estadoCivil">Estado Civil</label>
+                      <select  class="form-control" id="estadoCivil"name="estadoCivil">
+                          <option>Casando</option>
+                          <option>Solteiro</option>
+                          <option>Viúvo</option>
+                          <option>Divorciado</option>
+                          <option>União Estável</option>
+                      </select>
+                    </div>
+                <div class="col-md-4">
+                    <label for="nomeCargo">Selecione um cargo</label><br>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text" for="inputGroupSelect01">Cargo</label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01" name="cargo">
+                          <option selected></option>
+                          <% _.each(cargos, function (cargoOpc) { %>
+                            <option <%= (cargo == cargoOpc.nome ? "selected='selected'" : "" ) %> value="<%=cargoOpc.nome%>" ><%=cargoOpc.nome%></option>
+                          <% }) %>
+                        </select>
+                      </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="estadoCivil">Telefone 1</label>
+                    <input class="form-control"  name="telefone1" value=""  type="text" placeholder="Telefone" >
+                  </div>
+                  <div class="col-md-4">
+                      <label for="estadoCivil">Telefone 2</label>
+                      <input class="form-control"  name="telefone2" value=""  type="text" placeholder="Telefone" >
+                    </div>
+              </div>
+            </div>   
           </div>
-        </div>
-        
-      </form>
-     
+       <!-- endereço -->
+       <div class="tab-pane fade" id="end" role="tabpanel" aria-labelledby="end-tab">
+          <div class="form-group">
+              <div class="row">
+                  <div class="col-md-4 "> 
+                    <label for="numero">Número</label>
+                    <input class="form-control"  name="numeroEnd" value="" type="text" placeholder="Número" >
+                  </div>   
+                  <div class="col-md-4 "> 
+                      <label for="agencia">Locadouro</label>
+                      <input class="form-control"  name="logradouroEnd" value="" type="text" placeholder="Locadouro" >
+                  </div> 
+                  <div class="col-md-4 "> 
+                      <label for="bairroEnd">Bairro</label>
+                      <input class="form-control"  name="bairroEnd" value="" type="text" placeholder="Bairro" >
+                  </div>   
+                  <div class="col-md-4 "> 
+                      <label for="cidadeEnd">Cidade</label>
+                      <input class="form-control"  name="cidadeEnd" value="" type="text" placeholder="Cidade" >
+                  </div> 
+                  <div class="col-md-4 "> 
+                      <label for="estadoEnd">Estado</label>
+                      <input class="form-control"  name="estadoEnd" value="" type="text" placeholder="Estado" >
+                  </div> 
+                  <div class="col-md-4 "> 
+                      <label for="cepEnd">CEP</label>
+                      <input class="form-control"  name="cepEnd" value="" type="text" placeholder="CEP" >
+                  </div>                   
+               </div>
+          </div>
     </div>
-  </div>
-  
-</div>
 
+          <!-- dados bancarios -->
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4 "> 
+                          <label for="banco">Banco</label>
+                          <input class="form-control" id="banco" name="nomeBanco" value="" type="text" placeholder="Bancos" >
+                        </div>   
+                        <div class="col-md-4 "> 
+                            <label for="agencia">Agencia</label>
+                            <input class="form-control" id="agencia" name="agenciaBanco" value="" type="text" placeholder="Bancos" >
+                        </div> 
+                        <div class="col-md-4 "> 
+                            <label for="numConta">Numero da Conta</label>
+                            <input class="form-control" id="conta" name="numeroConta" value="" type="text" placeholder="Bancos" >
+                        </div>                       
+                     </div>
+                </div>
+          </div>
+          <!-- Documentos -->
+          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+              <div class="form-group">
+                  <div class="row">
+                      <div class="col-md-4 ">  
+                          <label for="rg">RG</label>
+                          <input type="text" class="form-control" placeholder="Ex.: RG">
+                      </div>   
+                      <div class="col-md-4 ">    
+                        <label for="data_nasci">Data de Expedição</label>
+                        <input class="form-control" value="dataExp" id="dataExp" name="dataExp" type="date"   placeholder="Data de Expedição" >
+                      </div>
+                      <div class="col-md-4 "> 
+                          <label for="orgaoExpeditor">Orgão Expedidor</label>
+                          <input type="text" class="form-control" placeholder="Ex.: SSP">
+                      </div>
+                    </div>              
+              </div>
+              <div class="form-group">
+                  <div class="row">
+                      <div class="col-md-4 ">  
+                          <label for="cpf">CPF</label>
+                          <input type="text" class="form-control cpf-mask" placeholder="Ex.: 000.000.000-00">
+                      </div> 
+                      <div class="col-md-4 ">  
+                          <label for="titulo">Titulo de Eleitor</label>
+                          <input type="text" class="form-control " placeholder="Ex.: 000.000.000-00">
+                      </div> 
+                      <div class="col-md-4 ">  
+                          <label for="pispasep">Pis/Pasep</label>
+                          <input type="text" class="form-control " placeholder="Ex.: 000.000.000-00">
+                      </div> 
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="row">
+                      <div class="col-md-8 ">  
+                          <label for="ctps">Carteira de Trabalho</label>
+                          <input type="text" class="form-control " placeholder="Ex.: 000.000.000-00">
+                      </div> 
+                      <div class="col-md-4 ">  
+                          <label for="certificadoReservista">Certificado Reservista</label>
+                          <input type="text" class="form-control " placeholder="Ex.: 000.000.000-00">
+                      </div> 
+                  </div>
+                </div>
+            </div>
+      
+            <hr/> 
+                      <div class="form-group text-center">
+                          <div class="col-md-12 ">
+                            <input type="submit" value="Salvar" class="btn btn-outline-primary col-md-4 " />
+                            <a href="/pesquisar" class="btn btn-outline-secondary col-md-4">Cancelar</a>
+                          </div>
+                        </div> 
+                      </form>
+      </div>
 </div>
-<%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>

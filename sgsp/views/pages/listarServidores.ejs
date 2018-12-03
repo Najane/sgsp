@@ -1,36 +1,37 @@
 <div id="listar-servidores" v-cloak>
-<div class="container col-md-8 ">
-</br>
-  <form id="formListarServidores" action="/servidor">
-    <input type="hidden" name="regSendoEditado" id="regSendoEditado">
-  </form>
-  <div class="table-responsive ">
-      <table class="table table-striped" cellspacing="0" cellpadding="0">
-        <thead class="thead-dark">
-        <tr>
-          <th>MATRICULA</th>
-          <th>NOME</th>
-          <th>SECRETARIA</th>
-          <th>CARGOS</th>
-          <th class="actions">AÇÕES</th>
-        </tr>   
-        </thead>     
-        <% _.each(servidores, function (servidor) { %>
-          <tr>
-            <td><%= servidor.matricula %></td>
-            <td><%= servidor.nome %></td>
-            <td><%= servidor.secretaria?servidor.secretaria:'nenhum' %></td>
-            <td><%= servidor.cargo?servidor.cargo:'nenhum' %></td>
-            <td class="actions">
-              <a class="btn btn-success btn-xs" href="view.html" >Visualizar</a>
-              <a class="btn btn-warning btn-xs" onclick="exibirEdicaoDoServidor('<%= servidor.matricula %>')">Editar</a>
-              <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-          </td> 
+    <div class="container col-md-8 ">
+    </br>
+      <form id="formListarServidores" action="/servidor">
+        <input type="hidden" name="regSendoEditado" id="regSendoEditado">
+      </form>
+      <div class="table-responsive ">
+          <table class="table table-striped " cellspacing="0" cellpadding="0">
+            <thead class=" bg-dark" style="color:white">
             <tr>
-        <% }) %>
-        
-      </table>
-  </div>
-</div>
-</div>
-<%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>
+              <th>MATRICULA</th>
+              <th class="text-center">NOME</th>
+              <th>SECRETARIA</th>
+              <th>CARGOS</th>
+              <th class="actions text-center" >AÇÕES</th>
+            </tr>   
+            </thead>     
+            <% _.each(servidores, function (servidor) { %>
+              <tr>
+                <td><%= servidor.matricula %></td>
+                <td><%= servidor.nome %></td>
+                <td><%= servidor.Secretaria?servidor.Secretaria.nome:'nenhum' %></td>
+                <td><%= servidor.Cargo?servidor.Cargo.nome:'nenhum' %></td>
+                <td class="actions">
+                  <a class="btn btn-success btn-xs" href="view.html" >Visualizar</a>
+                  <a class="btn btn-warning btn-xs" onclick="exibirEdicaoDoServidor('<%= servidor.matricula %>')">Editar</a>
+                  <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+              </td> 
+                <tr>
+            <% }) %>
+            
+          </table>
+      </div>
+    </div>
+    </div>
+    <%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>
+    
