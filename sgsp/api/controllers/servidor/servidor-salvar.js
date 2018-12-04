@@ -49,6 +49,25 @@ module.exports = {
     },
   
     fn: async function (inputs, exits) {
+
+      //Trata datas para não dar erro
+      if(inputs.dataAdmissao == ''){
+        inputs.dataAdmissao = null;
+      }
+      if(inputs.dataExpedicao == ''){
+        inputs.dataExpedicao = null;
+      }
+      if(inputs.dataNascimento == ''){
+        inputs.dataNascimento = null;
+      }
+      if(inputs.dataPosse == ''){
+        inputs.dataPosse = null;
+      }
+      if(inputs.cargo == ''){
+        inputs.cargo = null;
+      }
+
+
         servidor = await Servidor.findOne({
           matricula: inputs.matricula
         });
