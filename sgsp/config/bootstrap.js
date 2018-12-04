@@ -134,6 +134,7 @@ module.exports.bootstrap = async function(done) {
       numeroRG: '098765',
       cpf: '098765',
       cargo: 'Secretario',
+      dataAdmissao: null,
     },
   ]);
   await Servidor.createEach([
@@ -143,6 +144,7 @@ module.exports.bootstrap = async function(done) {
       numeroRG: '098766',
       cpf: '098766',
       cargo: 'Secretario',
+      dataAdmissao: null,
     },
   ]);
   await Servidor.createEach([
@@ -152,6 +154,7 @@ module.exports.bootstrap = async function(done) {
       numeroRG: '098767',
       cpf: '098767',
       cargo: 'Secretario',
+      dataAdmissao: null,
     },
   ]);
   await Servidor.createEach([
@@ -161,6 +164,7 @@ module.exports.bootstrap = async function(done) {
       numeroRG: '098768',
       cpf: '098768',
       cargo: 'Secretario',
+      dataAdmissao: null,
     },
   ]);
   await Servidor.createEach([
@@ -170,6 +174,7 @@ module.exports.bootstrap = async function(done) {
       numeroRG: '098769',
       cpf: '098769',
       cargo: 'Secretario',
+      dataAdmissao: null,
     },
   ]);
   await Servidor.createEach([
@@ -179,6 +184,7 @@ module.exports.bootstrap = async function(done) {
       numeroRG: '098770',
       cpf: '098779',
       cargo: 'Secretario',
+      dataAdmissao: null,
     },
   ]);
 

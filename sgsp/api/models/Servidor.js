@@ -21,7 +21,7 @@ module.exports = {
     matricula: { type: 'string', required:true, unique: true },
     nome: { type: 'string' },
     dataNascimento: { type: 'ref', columnType: 'date' },
-    dataAdmissao: { type: 'string'/*, columnType: 'date' */},
+    dataAdmissao: { type: 'ref', columnType: 'date' },
     estadoCivil: { type: 'string' },
     telefone1: { type: 'string' },
     telefone2: { type: 'string' },
@@ -75,7 +75,7 @@ module.exports = {
 
     //
     vencimentoServidor: { type: 'string' },
-    dataPosse: { type: 'string'/*, columnType: 'date' */},
+    dataPosse: { type: 'ref', columnType: 'date' },
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗

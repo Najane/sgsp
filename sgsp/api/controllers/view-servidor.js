@@ -72,10 +72,55 @@ module.exports = {
     }else{
       return exits.success({
         cargos: cargos,
-        cargo: '',
-        nome: '',
+
         matricula: '',
+        nome: '',
         dataNascimento: null,
+        dataAdmissao: null,
+        estadoCivil: '',
+        telefone1: '',
+        telefone2: '',
+        nomePai: '',
+        nomeMae: '',
+        sexo: '',
+        cor: '',
+        //Endereço
+        numeroEnd: '',
+        logradouroEnd: '',
+        bairroEnd: '',
+        cidadeEnd: '',
+        estadoEnd: '',
+        cepEnd: '',
+        
+        //Dados Bancarios
+        nomeBanco: '',
+        agenciaBanco: '',
+        numeroConta: '',
+
+        //Documentos
+        numeroRG: '',
+        dataExpedicao: '',
+        orgaoExpeditor: '',
+        cpf: '',
+        tituloEleitor: '',
+        pispasep: '',
+        ctps: '',
+        certificadoReservista: '',
+
+        //Grau de instrucao
+        grauInstrucao: '',
+        //Nacionalidade
+        pais: '',
+        //Naturalidade
+        estado: '',
+        cidade: '',
+        //
+        vencimentoServidor: '',
+        dataPosse: null,
+        cargo: '',
+        custo: '',
+        secretaria: ''
+
       });
     }
 

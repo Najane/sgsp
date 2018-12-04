@@ -27,11 +27,11 @@
             </div>
             <div class="form-group">
                 <label for="nomePai">Nome do Pai</label>
-                <input class="form-control"  name="nomePai" value="" type="text" placeholder="Nome do Pai" >
+                <input class="form-control"  name="nomePai" value="<%=nomePai%>" type="text" placeholder="Nome do Pai" >
               </div>
             <div class="form-group">
                   <label for="nomeMae">Nome da Mãe</label>
-                  <input class="form-control"  name="nomeMae" value="" type="text" placeholder="Nome da Mãe" >
+                  <input class="form-control"  name="nomeMae" value="<%=nomeMae%>" type="text" placeholder="Nome da Mãe" >
                 </div>
             <div class="form-group">
                 <div class="row">
@@ -71,7 +71,7 @@
                 <div class="col-md-4 ">
                     <label for="dataAdmi">Data de Admissão</label>
                     <input class="form-control"
-                    value="admissao"name="dataAdmissao" type="date"   placeholder="Data de Admissão" >
+                    value="<%=(dataAdmissao !== null)?dataAdmissao.toISOString().substring(0,10):''%>" name="dataAdmissao" type="date"   placeholder="Data de Admissão" >
                   </div>
                   <div class="col-md-4">
                       <label for="estadoCivil">Estado Civil</label>
@@ -99,11 +99,11 @@
                 </div>
                 <div class="col-md-4">
                     <label for="estadoCivil">Telefone 1</label>
-                    <input class="form-control"  name="telefone1" value=""  type="text" placeholder="Telefone" >
+                    <input class="form-control"  name="telefone1" value="<%=telefone1%>"  type="text" placeholder="Telefone" >
                   </div>
                   <div class="col-md-4">
                       <label for="estadoCivil">Telefone 2</label>
-                      <input class="form-control"  name="telefone2" value=""  type="text" placeholder="Telefone" >
+                      <input class="form-control"  name="telefone2" value="<%=telefone1%>"  type="text" placeholder="Telefone" >
                     </div>
               </div>
             </div>   
@@ -114,28 +114,28 @@
               <div class="row">
                   <div class="col-md-4 "> 
                     <label for="numero">Número</label>
-                    <input class="form-control"  name="numeroEnd" value="" type="text" placeholder="Número" >
+                    <input class="form-control"  name="numeroEnd" value="<%=numeroEnd%>" type="text" placeholder="Número" >
                   </div>   
                   <div class="col-md-4 "> 
                       <label for="agencia">Locadouro</label>
-                      <input class="form-control"  name="logradouroEnd" value="" type="text" placeholder="Locadouro" >
+                      <input class="form-control"  name="logradouroEnd" value="<%=logradouroEnd%>" type="text" placeholder="Locadouro" >
                   </div> 
                   <div class="col-md-4 "> 
                       <label for="bairroEnd">Bairro</label>
-                      <input class="form-control"  name="bairroEnd" value="" type="text" placeholder="Bairro" >
+                      <input class="form-control"  name="bairroEnd" value="<%=bairroEnd%>" type="text" placeholder="Bairro" >
                   </div>   
                   <div class="col-md-4 "> 
                       <label for="cidadeEnd">Cidade</label>
-                      <input class="form-control"  name="cidadeEnd" value="" type="text" placeholder="Cidade" >
+                      <input class="form-control"  name="cidadeEnd" value="<%=cidadeEnd%>" type="text" placeholder="Cidade" >
                   </div> 
                   
                   <div class="col-md-4 "> 
                       <label for="estadoEnd">Estado</label>
-                      <input class="form-control"  name="estadoEnd" value="" type="text" placeholder="Estado" >
+                      <input class="form-control"  name="estadoEnd" value="<%=estadoEnd%>" type="text" placeholder="Estado" >
                   </div> 
                   <div class="col-md-4 "> 
                       <label for="cepEnd">CEP</label>
-                      <input class="form-control"  name="cepEnd" value="" type="text" placeholder="CEP" >
+                      <input class="form-control"  name="cepEnd" value="<%=cepEnd%>" type="text" placeholder="CEP" >
                   </div>                   
                </div>
           </div>
@@ -147,15 +147,15 @@
                     <div class="row">
                         <div class="col-md-4 "> 
                           <label for="banco">Banco</label>
-                          <input class="form-control" id="banco" name="nomeBanco" value="" type="text" placeholder="Bancos" >
+                          <input class="form-control" id="banco" name="nomeBanco" value="<%=nomeBanco%>" type="text" placeholder="Bancos" >
                         </div>   
                         <div class="col-md-4 "> 
                             <label for="agencia">Agencia</label>
-                            <input class="form-control" id="agencia" name="agenciaBanco" value="" type="text" placeholder="Bancos" >
+                            <input class="form-control" id="agencia" name="agenciaBanco" value="<%=agenciaBanco%>" type="text" placeholder="Bancos" >
                         </div> 
                         <div class="col-md-4 "> 
                             <label for="numConta">Numero da Conta</label>
-                            <input class="form-control" id="conta" name="numeroConta" value="" type="text" placeholder="Bancos" >
+                            <input class="form-control" id="conta" name="numeroConta" value="<%=numeroConta%>" type="text" placeholder="Bancos" >
                         </div>                       
                      </div>
                 </div>
@@ -166,15 +166,15 @@
                   <div class="row">
                       <div class="col-md-4 ">  
                           <label for="rg">RG</label>
-                          <input type="text" class="form-control" placeholder="Ex.: RG">
+                          <input type="text" value="<%=numeroRG%>" name="numeroRG" class="form-control" placeholder="Ex.: RG">
                       </div>   
                       <div class="col-md-4 ">    
-                        <label for="data_nasci">Data de Expedição</label>
-                        <input class="form-control" value="dataExp" id="dataExp" name="dataExp" type="date"   placeholder="Data de Expedição" >
+                        <label for="dataExp">Data de Expedição</label>
+                        <input class="form-control" value="<%=dataExpedicao%>" id="dataExp" name="dataExpedicao" type="date"   placeholder="Data de Expedição" >
                       </div>
                       <div class="col-md-4 "> 
                           <label for="orgaoExpeditor">Orgão Expedidor</label>
-                          <input type="text" class="form-control" placeholder="Ex.: SSP">
+                          <input type="text" value="<%=orgaoExpeditor%>" name="orgaoExpeditor" class="form-control" placeholder="Ex.: SSP">
                       </div>
                     </div>              
               </div>
@@ -182,15 +182,15 @@
                   <div class="row">
                       <div class="col-md-4 ">  
                           <label for="cpf">CPF</label>
-                          <input type="text" class="form-control cpf-mask" placeholder="Ex.: 000.000.000-00">
+                          <input type="text" value="<%=cpf%>" name="cpf" class="form-control cpf-mask" placeholder="Ex.: 000.000.000-00">
                       </div> 
                       <div class="col-md-4 ">  
                           <label for="titulo">Titulo de Eleitor</label>
-                          <input type="text" class="form-control " placeholder="Ex.: 000.000.000-00">
+                          <input type="text" value="<%=tituloEleitor%>" name="tituloEleitor" class="form-control " placeholder="Ex.: 000.000.000-00">
                       </div> 
                       <div class="col-md-4 ">  
                           <label for="pispasep">Pis/Pasep</label>
-                          <input type="text" class="form-control " placeholder="Ex.: 000.000.000-00">
+                          <input type="text" value="<%=pispasep%>" name="pispasep" class="form-control " placeholder="Ex.: 000.000.000-00">
                       </div> 
                   </div>
               </div>
@@ -198,11 +198,11 @@
                   <div class="row">
                       <div class="col-md-8 ">  
                           <label for="ctps">Carteira de Trabalho</label>
-                          <input type="text" class="form-control " placeholder="Ex.: 000.000.000-00">
+                          <input type="text" value="<%=ctps%>" name="ctps" class="form-control " placeholder="Ex.: 000.000.000-00">
                       </div> 
                       <div class="col-md-4 ">  
                           <label for="certificadoReservista">Certificado Reservista</label>
-                          <input type="text" class="form-control " placeholder="Ex.: 000.000.000-00">
+                          <input type="text" value="<%=certificadoReservista%>" name="certificadoReservista" class="form-control " placeholder="Ex.: 000.000.000-00">
                       </div> 
                   </div>
                 </div>
