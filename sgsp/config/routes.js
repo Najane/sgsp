@@ -36,6 +36,7 @@ module.exports.routes = {
 
   '/servidor':               { action: 'view-servidor' },
   '/servidor/salvar':        { action: 'servidor/servidor-salvar' },
+  '/servidor/excluir':        { action: 'servidor/servidor-excluir' },
   '/cargo':                   { action: 'view-cargo' },
   '/custo':              { action: 'view-custo' },
   '/secretaria':         { action: 'view-secretaria' },

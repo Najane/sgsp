@@ -26,8 +26,15 @@ parasails.registerPage('listar-servidores', {
 });
 
 function exibirEdicaoDoServidor(mat){
-  var formListarServidores = document.getElementById('formListarServidores');
+  var form = document.getElementById('formEditarServidor');
   var regSendoEditado = document.getElementById('regSendoEditado');
   regSendoEditado.value = mat;
-  formListarServidores.submit();
+  form.submit();
+}
+
+function excluirServidor(mat){
+  var form = document.getElementById('formExcluirServidor');
+  var regSendoEditado = document.getElementById('regSendoExcluido');
+  regSendoEditado.value = mat;
+  form.submit();
 }
