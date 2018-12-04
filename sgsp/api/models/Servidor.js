@@ -47,7 +47,7 @@ module.exports = {
 
     //Documentos
     numeroRG: { type: 'string', required: false, unique: true },
-    dataExpedicao: { type: 'string', /*columnType: 'date'*/ },
+    dataExpedicao: { type: 'ref', columnType: 'date' },
     orgaoExpeditor: { type: 'string', required: false },
     cpf: { type: 'string', required: false, unique: true},
     tituloEleitor: { type: 'string' },
